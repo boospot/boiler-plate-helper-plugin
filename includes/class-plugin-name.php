@@ -99,6 +99,11 @@ class Plugin_Name {
 	 */
 	private function load_dependencies() {
 
+
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/dev-helper-functions.php';
+
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/boo-settings-helper/class-boo-settings-helper.php';
+
 		/**
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
@@ -156,6 +161,9 @@ class Plugin_Name {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+
+		$this->loader->add_action( 'init', $plugin_admin, 'setup_plugin_settings' );
+
 
 	}
 

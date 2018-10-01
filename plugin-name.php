@@ -13,7 +13,7 @@
  * @package           Plugin_Name
  *
  * @wordpress-plugin
- * Plugin Name:       Plugin Name
+ * Plugin Name:       Boiler Plate Helper Plugin
  * Plugin URI:        https://github.com/boospot
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
